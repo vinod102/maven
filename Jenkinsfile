@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Get_Code' blaster) {
+        stage('Get_Code_ blaster') {
             steps {
                 git 'https://github.com/AneesRavidKhan/DemoATC.git'
             }
