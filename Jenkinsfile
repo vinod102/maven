@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Get_Code_master') {
+        stage('Get_Code_Master') {
             steps {
                 git 'https://github.com/AneesRavidKhan/DemoATC.git'
             }
