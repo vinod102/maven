@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'scp target/DemoATR.war root@3.110.221.191:/var/lib/tomcat9/webapps'
+                sh 'scp target/DemoATR.war root@13.233.118.0:/var/lib/tomcat9/webapps'
             }
         }
     }
