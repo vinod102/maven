@@ -2,20 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Get_Code_Master') {
+        stage('CD') {
             steps {
-                git 'https://github.com/AneesRavidKhan/DemoATC.git'
+                git 'https://github.com/vinod102/flipkart-1.git'
             }
         }
-        stage('Build_Code') {
+        stage('CB') {
             steps {
                 sh 'mvn install'
             }
         }
-        stage('Deploy') {
+        stage('cd') {
             steps {
-                sh 'sshpass -p "suri" scp target/DemoATR.war root@3.110.221.191:/var/lib/tomcat9/webapps'
-            }
+              'sshpass -p "root" scp target/flipkart-1.0-SNAPSHOT.jar root@172.17.0.3:/home/vinod/Distros/apache-tomcat-8.5.75/webapps'
+            }   sh
         }
+        
     }
 }
